@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEBTECH LAB PROJECT</title>
+    
+  </head>
+
+  <body>
+    <div style="display: flex">
+      <div style="background-color: yellow; height: 600px; width: 250px">
+        <div
+          style="
+            background-color: pink;
+            height: 400px;
+            width: 250px;
+            text-align: center;
+            padding-top: 10px;
+            overflow: auto;
+          "
+        >
+          <h2 style="margin: 0;">Registration</h2>
+          <form style="display: flex; flex-direction: column; align-items: center;">
+            <input type="text" placeholder="User Name" style="margin: 5px; width: 80%;" required />
+            <input type="email" placeholder="Email ID" style="margin: 5px; width: 80%;" required />
+            <input type="password" placeholder="Password" style="margin: 5px; width: 80%;" required />
+            <input type="password" placeholder="Current Password" style="margin: 5px; width: 80%;" required />
+            <input type="date" placeholder="Date of Birth" style="margin: 5px; width: 80%;" required />
+            
+            <!-- Country Selection Dropdown -->
+            <select style="margin: 5px; width: 85%; padding: 5px;" required>
+              <option value="" disabled selected>Select Current Country</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="India">India</option>
+              <option value="USA">USA</option>
+              <option value="UK">UK</option>
+              <option value="Canada">Canada</option>
+              <option value="Australia">Australia</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <button type="submit" style="margin-top: 10px; width: 85%; background-color: blue; color: white; padding: 5px; border: none; cursor: pointer;">
+              Register
+            </button>
+          </form>
+        </div>
+      </div>
+      <div style="background-color: skyblue; height: 600px; width: 300px"></div>
+    </div>
+  </body>
+</html>
