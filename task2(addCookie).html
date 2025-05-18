@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WEBTECH LAB TASK</title>
+</head>
+
+<body style="margin: 0; padding: 0;">
+  <!-- Outer Wrapper for Centering Entire Layout -->
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+    
+    <!-- AQI Logo -->
+    <img src="aqi logo.jpg" alt="AQI Logo" style="width: 100px; height: auto; margin-bottom: 20px;">
+
+    <!-- Form Layout Container (Yellow + Blue) -->
+    <div style="display: flex">
+      
+      <!-- Yellow Box (with Registration + Login) -->
+      <div style="background-color: yellow; height: 600px; width: 250px; display: flex; flex-direction: column;">
+        
+        <!-- Pink Box (Registration Form) -->
+        <div style="background-color: pink; height: 400px; width: 250px; text-align: center; padding-top: 10px; overflow: auto;">
+          <h2 style="margin: 0;">Registration Form</h2>
+          <form id="registrationForm" style="display: flex; flex-direction: column; align-items: center;">
+            
+            <label>User Name:</label>
+            <input id="regUsername" type="text" style="margin: 5px; width: 80%;" />
+            <p id="usernameError" style="color: red; font-size: 0.9em; margin: 0;"></p>
+
+            <label>Email ID:</label>
+            <input id="regEmail" type="email" style="margin: 5px; width: 80%;" />
+            <p id="emailError" style="color: red; font-size: 0.9em; margin: 0;"></p>
+
+            <label>Password:</label>
+            <input id="regPassword" type="password" style="margin: 5px; width: 80%;" />
+            <p id="passwordError" style="color: red; font-size: 0.9em; margin: 0;"></p>
+
+            <label>Confirm Password:</label>
+            <input id="regConfirmPassword" type="password" style="margin: 5px; width: 80%;" />
+            <p id="confirmPasswordError" style="color: red; font-size: 0.9em; margin: 0;"></p>
+
+            <label>Date of Birth:</label>
+            <input id="regDob" type="date" style="margin: 5px; width: 80%;" />
+            <p id="dobError" style="color: red; font-size: 0.9em; margin: 0;"></p>
+
+            <label style="margin-top: 10px;">Gender:</label>
+            <div style="display: flex; justify-content: center; gap: 10px; margin: 5px 0;">
+              <label style="display: flex; align-items: center; gap: 2px;">
+                <input type="radio" name="gender" value="Male" /> Male
+              </label>
+              <label style="display: flex; align-items: center; gap: 2px;">
+                <input type="radio" name="gender" value="Female" /> Female
+              </label>
+              <label style="display: flex; align-items: center; gap: 2px;">
+                <input type="radio" name="gender" value="Other" /> Other
+              </label>
+            </div>
+            <p id="genderError" style="color: red; font-size: 0.9em; margin: 0;"></p>
+
+            <label>Current Country:</label>
+            <select id="regCountry" style="margin: 5px; width: 85%; padding: 5px;">
+              <option value="" disabled selected>Select</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="India">India</option>
+              <option value="USA">USA</option>
+              <option value="UK">UK</option>
+              <option value="Canada">Canada</option>
+              <option value="Australia">Australia</option>
+              <option value="Other">Other</option>
+            </select>
+            <p id="countryError" style="color: red; font-size: 0.9em; margin: 0;"></p>
+
+            <label>Comments:</label>
+            <textarea id="regComments" placeholder="Your comments..." rows="3" style="margin: 5px; width: 80%; padding: 5px;"></textarea>
+
+            <label style="display: flex; align-items: center; gap: 5px; margin: 5px;">
+              <input type="checkbox" id="regTerms"> I agree to the terms and conditions
+            </label>
+            <p id="termsError" style="color: red; font-size: 0.9em; margin: 0;"></p>
+
+            <div>
+              <label for="color">Choose Background Color:</label><br />
+              <input type="color" id="color" name="color" value="#ffffff" style="margin-top: 5px;">
+            </div>
+
+            <button type="submit" style="margin-top: 10px; width: 85%; background-color: blue; color: white; padding: 5px; border: none; cursor: pointer;">
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <!-- Login Form -->
+        <div style="flex-grow: 1; text-align: center; padding-top: 10px;">
+          <h2 style="margin: 0;">Login</h2>
+          <form id="loginForm" style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
+            
+            <label>Email ID:</label>
+            <input id="loginEmail" type="email" style="margin: 2px; width: 80%;" />
+            <p id="loginEmailError" style="color: red; font-size: 0.9em; margin: 0;"></p>
+
+            <label>Password:</label>
+            <input id="loginPassword" type="password" style="margin: 2px; width: 80%;" />
+            <p id="loginPasswordError" style="color: red; font-size: 0.9em; margin: 0;"></p>
+
+            <button type="submit" style="margin-top: 10px; width: 85%; background-color: green; color: white; padding: 5px; border: none; cursor: pointer;">
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Sky Blue Box with Table -->
+      <div style="background-color: skyblue; height: 580px; width: 300px; padding: 10px; overflow-y: auto;">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th style="border: 1px solid white; padding: 8px;">City</th>
+              <th style="border: 1px solid white; padding: 8px;">Air Quality Index</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="border: 1px solid white; padding: 8px;">Dhaka</td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;">Tokyo</td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;">Mumbai</td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Cookie management for background color
+    function setCookie(name, value, days = 3650) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      let expires = "expires=" + date.toUTCString();
+      document.cookie = `${name}=${value}; ${expires}; path=/`;
+    }
+
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+      return null;
+    }
+
+    function applySavedBackgroundColor() {
+      const savedColor = getCookie("bgcolor");
+      if (savedColor) {
+        document.body.style.backgroundColor = savedColor;
+        document.getElementById("color").value = savedColor;
+      }
+    }
+
+    // Background color change with cookie
+    let colorInput = document.getElementById('color');
+    colorInput.addEventListener('input', function () {
+      document.body.style.backgroundColor = colorInput.value;
+      setCookie("bgcolor", colorInput.value);
+    });
+
+    window.addEventListener("load", applySavedBackgroundColor);
+
+    // Registration form validation
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      let username = document.getElementById('regUsername').value.trim();
+      let email = document.getElementById('regEmail').value.trim();
+      let password = document.getElementById('regPassword').value;
+      let confirmPassword = document.getElementById('regConfirmPassword').value;
+      let dob = document.getElementById('regDob').value;
+      let gender = document.querySelector('input[name="gender"]:checked');
+      let country = document.getElementById('regCountry').value;
+      let terms = document.getElementById('regTerms').checked;
+
+      let usernameError = document.getElementById('usernameError');
+      let emailError = document.getElementById('emailError');
+      let passwordError = document.getElementById('passwordError');
+      let confirmPasswordError = document.getElementById('confirmPasswordError');
+      let dobError = document.getElementById('dobError');
+      let genderError = document.getElementById('genderError');
+      let countryError = document.getElementById('countryError');
+      let termsError = document.getElementById('termsError');
+
+      usernameError.textContent = '';
+      emailError.textContent = '';
+      passwordError.textContent = '';
+      confirmPasswordError.textContent = '';
+      dobError.textContent = '';
+      genderError.textContent = '';
+      countryError.textContent = '';
+      termsError.textContent = '';
+
+      let valid = true;
+      let usernamePattern = /^[a-zA-Z.\-\s]+$/;
+      let emailPattern = /^[a-zA-Z0-9._%+-]+@(gmail|hotmail|yahoo)\.com$/i;
+      let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+      if (username === '') {
+        usernameError.textContent = 'Full Name is required.';
+        valid = false;
+      } else if (!usernamePattern.test(username)) {
+        usernameError.textContent = 'Invalid name: use letters, hyphen, dot, spaces only.';
+        valid = false;
+      }
+
+      if (email === '') {
+        emailError.textContent = 'Email ID is required.';
+        valid = false;
+      } else if (!emailPattern.test(email)) {
+        emailError.textContent = 'Email must be a gmail.com, hotmail.com, or yahoo.com address.';
+        valid = false;
+      }
+
+      if (password === '') {
+        passwordError.textContent = 'Password is required.';
+        valid = false;
+      } else if (!passwordPattern.test(password)) {
+        passwordError.textContent = 'Password must be 8+ chars with uppercase, lowercase, number, symbol.';
+        valid = false;
+      }
+
+      if (confirmPassword === '') {
+        confirmPasswordError.textContent = 'Please confirm your password.';
+        valid = false;
+      } else if (password !== confirmPassword) {
+        confirmPasswordError.textContent = 'Passwords do not match.';
+        valid = false;
+      }
+
+      if (dob === '') {
+        dobError.textContent = 'Please select your date of birth.';
+        valid = false;
+      } else {
+        let dobDate = new Date(dob);
+        let today = new Date();
+        let age = today.getFullYear() - dobDate.getFullYear();
+        let m = today.getMonth() - dobDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < dobDate.getDate())) {
+          age--;
+        }
+        if (age < 18) {
+          dobError.textContent = 'You must be at least 18 years old.';
+          valid = false;
+        }
+      }
+
+      if (!gender) {
+        genderError.textContent = 'Please select a gender.';
+        valid = false;
+      }
+
+      if (country === '') {
+        countryError.textContent = 'Please select a country.';
+        valid = false;
+      }
+
+      if (!terms) {
+        termsError.textContent = 'You must agree to the terms and conditions.';
+        valid = false;
+      }
+
+      if (valid) {
+        alert('Registration successful!');
+      }
+    });
+
+    // Login form validation
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      let email = document.getElementById('loginEmail').value.trim();
+      let password = document.getElementById('loginPassword').value.trim();
+
+      let emailError = document.getElementById('loginEmailError');
+      let passwordError = document.getElementById('loginPasswordError');
+
+      emailError.textContent = '';
+      passwordError.textContent = '';
+
+      let valid = true;
+
+      if (email === '') {
+        emailError.textContent = 'Please enter your email.';
+        valid = false;
+      }
+
+      if (password === '') {
+        passwordError.textContent = 'Please enter your password.';
+        valid = false;
+      }
+
+      if (valid) {
+        alert('Login successful!');
+      }
+    });
+  </script>
+</body>
+</html>
