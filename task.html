@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WEBTECH LAB TASK</title>
+</head>
+
+<body style="margin: 0; padding: 0;">
+  <!-- Outer Wrapper for Centering Entire Layout -->
+  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh;">
+    
+    <!-- AQI Logo -->
+    <img src="aqi logo.jpg" alt="AQI Logo" style="width: 100px; height: auto; margin-bottom: 20px;">
+
+    <!-- Form Layout Container (Yellow + Blue) -->
+    <div style="display: flex">
+      
+      <!-- Yellow Box (with Registration + Login) -->
+      <div style="background-color: yellow; height: 600px; width: 250px; display: flex; flex-direction: column;">
+        
+        <!-- Pink Box (Registration Form) -->
+        <div style="background-color: pink; height: 400px; width: 250px; text-align: center; padding-top: 10px; overflow: auto;">
+          <h2 style="margin: 0;">Registration Form</h2>
+          <form id="registrationForm" style="display: flex; flex-direction: column; align-items: center;">
+            
+            <label>User Name:</label>
+            <input id="regUsername" type="text" style="margin: 5px; width: 80%;" />
+
+            <label>Email ID:</label>
+            <input id="regEmail" type="email" style="margin: 5px; width: 80%;" />
+
+            <label>Password:</label>
+            <input id="regPassword" type="password" style="margin: 5px; width: 80%;" />
+
+            <label>Confirm Password:</label>
+            <input id="regConfirmPassword" type="password" style="margin: 5px; width: 80%;" />
+
+            <label>Date of Birth:</label>
+            <input id="regDob" type="date" style="margin: 5px; width: 80%;" />
+
+            <label style="margin-top: 10px;">Gender:</label>
+            <div style="display: flex; justify-content: center; gap: 10px; margin: 5px 0;">
+              <label style="display: flex; align-items: center; gap: 2px;">
+                <input type="radio" name="gender" value="Male" /> Male
+              </label>
+              <label style="display: flex; align-items: center; gap: 2px;">
+                <input type="radio" name="gender" value="Female" /> Female
+              </label>
+              <label style="display: flex; align-items: center; gap: 2px;">
+                <input type="radio" name="gender" value="Other" /> Other
+              </label>
+            </div>
+
+            <label>Current Country:</label>
+            <select id="regCountry" style="margin: 5px; width: 85%; padding: 5px;">
+              <option value="" disabled selected>Select</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="India">India</option>
+              <option value="USA">USA</option>
+              <option value="UK">UK</option>
+              <option value="Canada">Canada</option>
+              <option value="Australia">Australia</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <div>
+              <label for="color">Choose Background Color:</label><br />
+              <input type="color" id="color" name="color" value="#ffffff" style="margin-top: 5px;">
+            </div>
+
+            <button type="submit" style="margin-top: 10px; width: 85%; background-color: blue; color: white; padding: 5px; border: none; cursor: pointer;">
+              Submit
+            </button>
+          </form>
+        </div>
+
+        <!-- Login Form -->
+        <div style="flex-grow: 1; text-align: center; padding-top: 10px;">
+          <h2 style="margin: 0;">Login</h2>
+          <form id="loginForm" style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
+            
+            <label>User Name:</label>
+            <input id="loginUsername" type="text" style="margin: 2px; width: 80%;" />
+
+            <label>Email ID:</label>
+            <input id="loginEmail" type="email" style="margin: 2px; width: 80%;" />
+
+            <label>Password:</label>
+            <input id="loginPassword" type="password" style="margin: 2px; width: 80%;" />
+
+            <button type="submit" style="margin-top: 10px; width: 85%; background-color: green; color: white; padding: 5px; border: none; cursor: pointer;">
+              Login
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Sky Blue Box with Table -->
+      <div style="background-color: skyblue; height: 580px; width: 300px; padding: 10px; overflow-y: auto;">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th style="border: 1px solid white; padding: 8px;">City</th>
+              <th style="border: 1px solid white; padding: 8px;"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 10 empty rows -->
+            <tr><td style="border: 1px solid white; padding: 8px;">Dhaka</td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;">Tokyo</td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;">Mumbai</td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+            <tr><td style="border: 1px solid white; padding: 8px;"></td><td style="border: 1px solid white; padding: 8px;"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Background color change
+    let colorInput = document.getElementById('color');
+    colorInput.addEventListener('input', function () {
+      document.body.style.backgroundColor = colorInput.value;
+    });
+
+    // Registration form validation
+    document.getElementById('registrationForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Get form field values
+      let username = document.getElementById('regUsername').value.trim();
+      let email = document.getElementById('regEmail').value.trim();
+      let password = document.getElementById('regPassword').value.trim();
+      let confirmPassword = document.getElementById('regConfirmPassword').value.trim();
+      let dob = document.getElementById('regDob').value;
+      let gender = document.querySelector('input[name="gender"]:checked');
+      let country = document.getElementById('regCountry').value;
+
+      // Regular expressions for validation
+      let usernamePattern = /^[A-Za-z\s]+$/;
+      let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+      // Username validation
+      if (!usernamePattern.test(username)) {
+        alert("Username should contain only letters and spaces.");
+        return;
+      }
+
+      // Email validation
+      if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+        alert("Invalid email format.");
+        return;
+      }
+
+      // Password validation
+      if (password === "") {
+        alert("Password cannot be empty.");
+        return;
+      }
+      if (!passwordPattern.test(password)) {
+        alert(
+          "Password must be at least 8 characters long, include at least one uppercase letter, one lowercase letter, one number, and one special character (@$!%*?&)."
+        );
+        return;
+      }
+
+      // Confirm password validation
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      // Date of birth validation
+      if (!dob) {
+        alert("Please select a date of birth.");
+        return;
+      }
+
+      // Gender validation
+      if (!gender) {
+        alert("Please select a gender.");
+        return;
+      }
+
+      // Country validation
+      if (!country) {
+        alert("Please select a country.");
+        return;
+      }
+
+      // If all validations pass
+      alert("Registration successful!");
+    });
+
+    // Login form validation
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Get form field values
+      let username = document.getElementById('loginUsername').value.trim();
+      let email = document.getElementById('loginEmail').value.trim();
+      let password = document.getElementById('loginPassword').value.trim();
+
+      // Regular expression for username validation
+      let usernamePattern = /^[A-Za-z\s]+$/;
+
+      // Username validation
+      if (username === '') {
+        alert("Please enter your username.");
+        return;
+      }
+      if (!usernamePattern.test(username)) {
+        alert("Username should contain only letters and spaces.");
+        return;
+      }
+
+      // Email validation
+      if (email === '') {
+        alert("Please enter your email.");
+        return;
+      }
+      if (email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+        alert("Invalid email format.");
+        return;
+      }
+
+      // Password validation
+      if (password === '') {
+        alert("Please enter your password.");
+        return;
+      }
+
+      // If all validations pass
+      alert("Login successful!");
+    });
+  </script>
+</body>
+</html>
